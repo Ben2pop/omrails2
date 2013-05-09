@@ -1,16 +1,19 @@
 
+<% if user_signed_in? %>
+   <div class="hero-unit">
+     <h1>You're Signed In</h1>
+   </div>
+<% else %>
 <div class="hero-unit">
-
-
-<h1>Welcome to my new website</h1>
-
-<p>
+   <h1>Welcome to my new website</h1>
+        <p>
 	My name is Raphael<br> Please add me on facebook <%= link_to ": Raphael Bendenoun", "https://www.facebook.com/r.bendenoun"%>
-</p>
-<br>
-<p>
-<%= link_to "Sign up now", "#", class: "btn btn-primary btn-large" %>
-</p>
+       </p>
+       <br>
+       <p>
+    <%= link_to "Sign up now", new_user_registration_path, class: "btn btn-primary btn-large" %>
+       </p>
 
 
 </div>
+<% end %>
