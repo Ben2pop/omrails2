@@ -19,3 +19,5 @@ doc/
 .project
 
 
+# Ignore Paperclip uploaded files
+/public/system
